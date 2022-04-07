@@ -6,3 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     actualizarAvance();
 })
 
+
+
+
+
+
+
+
+

@@ -12,7 +12,7 @@ exports.autenticarUsuario = passport.authenticate('local', {
     successRedirect: '/', 
     failureRedirect: '/iniciar-sesion',
     failureFlash: true,
-    badRequestMessage: 'Ambos campos son obligatorios',
+    badRequestMessage: 'Todos los campos son obligatorios',
 });
 
 //Funcion para revisar si el usuario esta autenticado
