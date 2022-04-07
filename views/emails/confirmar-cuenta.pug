@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        style 
+            include ./emails.css
+    body 
+        h2 Confirma tu cuenta
+        p Para confirmar tu cuenta, haz click en el siguiente botón:
+        a(href="#{confirmarUrl}") Confirmar cuenta
+        p Este enlace expirará en 1 hora.
+        p Si tienes problemas para accerder utiliza este enlace #{confirmarUrl}
+        p Si no puedes hacer clic en el enlace, copia y pega la URL en tu navegador.
+
+        p Gracias por utilizar nuestro servicio.
+        
