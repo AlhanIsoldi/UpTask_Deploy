@@ -3,18 +3,19 @@ import Swal from 'sweetalert2'
 
 import {actualizarAvance} from '../funciones/avance';
 
-const tareas = document.querySelector('.listado-pendientes ul')
+const tareas = document.querySelector('.listado-pendientes')
 
 if (tareas) {
   tareas.addEventListener('click', (e) => {
     if (e.target.classList.contains('fa-check-circle')) {
       const icono = e.target
+      
       //extraer id de tarea
       const idTarea = e.target.parentElement.parentElement.dataset.tarea
-
+        
       //Request hacia /tareas/:id
       const url = `${location.origin}/tareas/${idTarea}`
-
+        
       axios.patch(url, { idTarea }).then(function (respuesta) {
         if (respuesta.status === 200) {
           icono.classList.toggle('completo')
@@ -59,5 +60,6 @@ if (tareas) {
     }
   })
 }
+
 
 export default tareas

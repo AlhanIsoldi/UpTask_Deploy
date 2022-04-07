@@ -68,6 +68,7 @@ exports.proyectoPorUrl = async (req, res, next) => {
 
   const [proyectos, proyecto] = await Promise.all([proyectosPromise, proyectoPromise])
 
+  
   //Consultar tareas del proyecto actual
   const tareas = await Tareas.findAll({
     where: {
@@ -75,6 +76,7 @@ exports.proyectoPorUrl = async (req, res, next) => {
     }
   })
 
+  //console.log(tareas)
 
   if(!proyecto) next()
   
